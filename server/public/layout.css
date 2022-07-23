@@ -1,0 +1,8 @@
+.container {
+  background-color: lightgray;
+  margin: 0 auto;
+  height: auto;
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
