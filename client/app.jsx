@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Container from './components/container';
+import NavBar from './components/navbar';
 import PokemonList from './components/pokemonlist';
 import Pagination from './components/pagination';
 import axios from 'axios';
@@ -38,13 +39,16 @@ function App() {
 
   if (loading) return 'Loading...';
   return (
-    <Container>
-      <PokemonList pokemon={pokemon} />
-      <Pagination
-        goToNextPage={nextPage ? goToNextPage : null}
-        goToPrevPage={prevPage ? goToPrevPage : null}
-      />
-    </Container>
+    <>
+      <NavBar/>
+      <Container>
+        <PokemonList pokemon={pokemon} />
+        <Pagination
+          goToNextPage={nextPage ? goToNextPage : null}
+          goToPrevPage={prevPage ? goToPrevPage : null}
+        />
+      </Container>
+    </>
   );
 }
 
