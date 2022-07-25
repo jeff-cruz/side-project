@@ -2,39 +2,52 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+a {
+  cursor: pointer;
+}
+
 .navbar {
   position: fixed;
-  height: 4rem;
+  height: 3rem;
   min-width: 100vw;
-  background: linear-gradient(rgb(41, 109, 237), rgb(94, 142, 231));
+  background: linear-gradient(#03045e, #000295);
   display: flex;
   box-shadow: inset;
 }
 
+/* rgb(41, 109, 237) */
 .pokemon-container {
   margin-top: 4rem;
+  color: white;
 }
 
 .logo {
   margin-top: 0.5rem;
   margin-left: 0.5rem;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   filter: drop-shadow(3px 2px 3px #44d);
 }
 
 .navbar-buttons {
   display: flex;
+  margin-left: 1rem;
 }
 
 .nav-button {
   width: 5rem;
-  height: 4rem;
+  height: 3rem;
   text-align: center;
-  border-left: 1px;
   color: white;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  line-height: 3rem;
+}
+
+#nav-button-1 {
+  border-right: 0.125px solid white;
+  border-left: 0.125px solid white;
+}
+
+#nav-button-2,
+#nav-button-3 {
+  border-right: 0.125px solid white;
 }
