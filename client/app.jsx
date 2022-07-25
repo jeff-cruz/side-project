@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Container from './components/container';
-import NavBar from './components/navbar';
 import PokemonList from './components/pokemonlist';
 import Pagination from './components/pagination';
 import axios from 'axios';
@@ -23,7 +21,7 @@ function App() {
         setLoading(false);
         setNextPage(res.data.next);
         setPrevPage(res.data.previous);
-        setPokemon(res.data.results.map(pokemon => pokemon.name));
+        setPokemon(res.data.results.map(p => p.name));
       });
 
     return () => cancel();
@@ -40,14 +38,11 @@ function App() {
   if (loading) return 'Loading...';
   return (
     <>
-      <NavBar/>
-      <Container>
-        <PokemonList pokemon={pokemon} />
-        <Pagination
-          goToNextPage={nextPage ? goToNextPage : null}
-          goToPrevPage={prevPage ? goToPrevPage : null}
-        />
-      </Container>
+      <PokemonList pokemon={pokemon} />
+      <Pagination
+        goToNextPage={nextPage ? goToNextPage : null}
+        goToPrevPage={prevPage ? goToPrevPage : null}
+      />
     </>
   );
 }
