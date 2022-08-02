@@ -2,7 +2,8 @@ import React from 'react';
 
 const styles = {
   page: {
-    minHeight: 'calc(100vh - 10rem)'
+    minHeight: '100vh',
+    minWidth: '100vw'
   }
 };
 
