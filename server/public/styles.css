@@ -1,53 +1,48 @@
-body {
-  font-family: "Open Sans", sans-serif;
+.container {
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgb(60, 60, 60));
 }
 
-a {
-  cursor: pointer;
+.logo-container {
+  height: auto;
+  font-size: 8rem;
+  text-align: center;
+  margin: 0 auto;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+.logo-name {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.logo-desc {
+  font-size: 2rem;
+  margin: 0;
 }
 
 .navbar {
+  background-color: grey;
   position: fixed;
-  height: 3rem;
-  min-width: 100vw;
-  background: linear-gradient(#03045e, #000295);
-  display: flex;
-  box-shadow: inset;
+  height: 100vh;
+  width: 13.5rem;
+  margin-left: -10rem;
+  z-index: 101;
+  transition: 0.5s;
 }
 
-/* rgb(41, 109, 237) */
-.pokemon-container {
-  margin-top: 4rem;
-  color: white;
+.navbar:hover {
+  transform: translateX(10rem);
+  transition: 0.5s;
 }
 
-.logo {
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  filter: drop-shadow(3px 2px 3px #44d);
-}
-
-.navbar-buttons {
-  display: flex;
-  margin-left: 1rem;
-}
-
-.nav-button {
-  width: 5rem;
-  height: 3rem;
-  text-align: center;
-  color: white;
-  line-height: 3rem;
-}
-
-#nav-button-1 {
-  border-right: 0.125px solid white;
-  border-left: 0.125px solid white;
-}
-
-#nav-button-2,
-#nav-button-3 {
-  border-right: 0.125px solid white;
+.overlay {
+  background-color: rgb(59 59 59 / 50%);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  transition: 0.3s;
 }
